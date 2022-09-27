@@ -65,3 +65,39 @@ Data description for `Returns`:
 Data description for `People`:
 - `Regional Manager` &rarr; Name of the Regional Manager.
 - `Region` &rarr; Region where the Customer belongs.
+
+# Conclusions
+
+Here are some conclusion to sum up what we have been through so far.
+1. The main driver of loss in Superstore is due to high discount given. We clearly see that the more discounts have been offered, the lesser profits have achieved. Products with no discounts show high range of profits but as the discount range increases, we only see more and more loss with hardly any profit. In fact, when the discount given is exceeding 20%, there are no more profits made by Superstore. The most profitable region so far is the Western of United States. 
+2. We have used three machine learning algorithms to perform customer segmentation using LRFM model metrics. The algorithm we will implement is K-Means clustering since it gives us the highest evaluation metric scores (DB index and Silhouette score) compared to the other two algorithms. From K-Means clustering we get 4 segments (793 total customers), i.e.
+    - `"Lost"` customer segment, 13.11% from total customers. They are relatively old customers (L = 2) but their last purchases are very long ago (R = 1),  purchased very few (F = 1), and spent the lowest (M = 1) compare to other segments. (`LRFM = 2111`)
+    - `"Important"` customer segment, 51.32% from total customers. They are the oldest customers (L = 4), purchased most recently (R = 4) but not the most frequently (F = 3) and spent quite a lot (M = 3). (`LRFM = 4433`)
+    - `"Champion"` customer segment, 19.55% from total customers. They are commonly old customers (L = 3) who have purchased quite recently (R = 3), purchased most frequently (F = 4) and spent the most (M = 4). (`LRFM = 3344`)
+    - `"Potential"` customer segment, 16.0% from total customers. They have good amount of spending (M = 2) and purchases (F = 2) although they are fresh customers (L = 1) but their last purchase are quite a long ago (R = 2). (`LRFM = 1222`)
+3. We have used Apriori algorithm to get some insights about purchasing patterns of customers. Those purchasing patterns are in the form of strong association rules i.e. 
+    - {Binders} &rarr; {Appliances} and {Paper} &rarr; {Appliances}.
+    - {Art} &rarr; {Phones} and {Furnishings} &rarr; {Phones}.
+    - {Binders, Furnishings} &rarr; {Storage}.
+    
+   The results of this market basket analysis can be then used for a data-driven marketing strategy and decision making for product recommendation.
+
+# Recommendations
+
+1. Superstore has to review and evaluate the marketing strategy of offering high discount to a product since that will lead to a loss.
+2. "Consumer" customer is the most profitable then followed by "Corporate" customer. The marketing strategy should always focus on retaining this two customers. For "Home Office" customer, these customers might be busy with their work and less likely to spend their time selecting individual products. Hence create a special "Home Office package" with products used for offices for them.
+3. Top 5 most profitable sub-category are "Copiers", "Phones", "Accessories", "Paper", and "Binders". The marketing strategy has to focus on marketing these products, especially for high demand products, "Paper" and "Binders". 
+   -  "Paper" and "Binders" are good for cross-selling strategy or bundling products to increase the profit, sales, and demand on low performance sub-category. In fact, we discover from market basket analysis that "Binders" or "Paper" are most likely purchased together with "Appliances". Hence, every time someone purchases "Binders" or "Paper" (which is most frequent to happen), we can offer "Appliances" and give reasonable discount to attract more sales.
+   - "Phones" is a sub-category with the highest sales. We also see that "Art" or "Furnishings" are frequently purchased together with "Phones". Therefore, we could increase the sales on "Phones" by putting "Phones" products at a place that closer to "Art" or "Furnishings" products. This will increase the probability of purchasing "Phones" when the customers purchase "Art" or "Furnishings".
+   - Create a single bundle of product with a lower price compare to each price combined for sub categories of "Binders", "Furnishings", and "Storage". This way will attract more sales and generate more income since customers who purchase "Binders" and "Furnishings" together are more likely to purchase it together with "Storage".
+4. Sub category such as "Tables", "Bookcases", and "Machines" are the loss-making sub-category. Those sub-categories relatively have high average discount and low total quantity (in term of transaction too). This might indicate that the marketing strategy of giving high average discount to a low demand product to increase the sales and transactions didn't help that much. Superstore should consider another marketing strategy such as, 
+    - Bundle or package them together with high selling products to create "Office Furniture Package" ("Chairs", "Tables", and "Bookcases") to offset the losses,
+    - Change suppliers or bargain for cheaper price, or
+    - Remove these sub-categories since they might not fit for the customer (also for "Fasteners" and "Supplies").
+5. Superstore has to ensure their stock for "Office Supplies" category is always well-stocked and available over time since it is the category with the highest total transactions and quantities, especially for "Binders" and "Papers" sub-category (those are likely to be the most purchased categories every month). There is also a seasonality pattern at the end of the month where the highest total transactions and quantities has been occurring there for 4 years, they need to increase their stock for the most purchased products, so there would not be understocked product at the end of the month since over the year the trend of sales is increasing.
+6. Some states have fewer in term of sales and transactions, lack of awareness can be the reason for this, hence advertising in those states might help in more sales.
+7. Recommendation for segmented customers:
+    - `"Champion"` customer segment: This is the most valuable customer. Focus to improve their frequency and retention such as loyalty programs, give rewards to make them feel respected, market our most expensive products on these customers, offer new products, and cross-selling/up-selling strategy.
+    - `"Important"` customer segment: This is loyal customer. Focus to maintain their loyalty and improve their value such as offer a recommendation of some new products and try to give a price incentives on expensive products or more competitive price.
+    - `"Potential"` customer segment: This has a potential to be a valuable customer. Focus to improve their value, retention, and frequency such as cross-selling/up-selling strategy, give price incentives and new products recomendation.
+    - `"Lost"` customer segment: This customer have already churned. Focus to reactivate the customer by forming a reactivation strategy such as send them reactivation emails, make limited time offers, and ask them for feedback.
