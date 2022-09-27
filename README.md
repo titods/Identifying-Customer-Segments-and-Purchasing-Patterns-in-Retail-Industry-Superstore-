@@ -2,7 +2,7 @@
 There are 3 parts of jupyter notebook file in this project: 
 1. [Part 1 - EDA.ipynb](https://github.com/titods/Identifying-Customer-Segments-and-Purchasing-Patterns-in-Retail-Industry-Superstore-/blob/main/Part%201%20-%20EDA.ipynb) consist of `Introduction`, `Load the dataset`, `Data cleaning`, and `Exploratory Data Analysis (EDA)` sections.
 2. [Part 2 - Customer Segmentation.ipynb](https://github.com/titods/Identifying-Customer-Segments-and-Purchasing-Patterns-in-Retail-Industry-Superstore-/blob/main/Part%202%20-%20Customer%20Segmentation.ipynb) consist of `Customer Segmentation` section.
-3. [Part 3 - Market Basket Analysis.ipynb](https://github.com/titods/Identifying-Customer-Segments-and-Purchasing-Patterns-in-Retail-Industry-Superstore-/blob/main/Part%203%20-%20Market%20Basket%20Analysis.ipynb) consist of `Market Basket Analysis`, `Conclusions`, and `Recommendations` sections.
+3. [Part 3 - Market Basket Analysis.ipynb](https://github.com/titods/Identifying-Customer-Segments-and-Purchasing-Patterns-in-Retail-Industry-Superstore-/blob/main/Part%203%20-%20Market%20Basket%20Analysis.ipynb) consist of `Market Basket Analysis`, `Conclusions`, `Recommendations`, and `References` sections.
 
 # Introduction
 
