@@ -5,32 +5,27 @@ There are 3 parts of jupyter notebook file in this project:
 3. [Part 3 - Market Basket Analysis.ipynb](https://github.com/titods/Identifying-Customer-Segments-and-Purchasing-Patterns-in-Retail-Industry-Superstore-/blob/main/Part%203%20-%20Market%20Basket%20Analysis.ipynb) consist of `Market Basket Analysis`, `Conclusions`, `Recommendations`, and `References` sections.
 
 # Introduction
-
 Superstore is a fictional retail business located in the United States which sells Office Supplies, Furniture, and Technology Products. Their customers are the mass Consumer, Corporate and Home Offices. This business has been running from 03 January 2018. They want to analyze and assess their business performance from early 2018 to the end of 2021 such as identifying the customer segments and the purchasing patterns of customers.
 
 *Note: the picture is for reference only*
 <img src="image/superstore.jpg" width="600">
 
 ## Objective
-
 - To get some insights about Superstore's market performance and main driver of loss in Superstore.
 - To identify and understand customer segments in Superstore.
 - To identify and understand purchasing patterns of customers in Superstore.
 
 ## Business  value
-
 - We could identify opportunities for Superstore to boost business growth.
 - We could treat each customer differently according to their segments. (reducing the risk and increasing the efficiency in deciding marketing strategy deployment in Superstore).
 - We could help product development team to develop a product and to create product differentiation based on history of product purchases.
 
 ## Methodology
-
 - Exploratory Data Analysis.
 - Customer segmentation using clustering algorithm i.e. K-Means, Gaussian Mixture Model, and Hierarchical Clustering.
 - Market basket analysis using apriori algorithm.
 
 ## The dataset
-
 The dataset is obtained from [Kaggle](https://www.kaggle.com/datasets/sirajahmad/superstore) and also provided in [Tableau community](https://community.tableau.com/s/question/0D54T00000CWeX8SAL/sample-superstore-sales-excelxls). The timestamps are from **03 January 2018** to **30 December 2021**. This dataset only contains sales information in United States but if you want more granular sales across different country, There are also Global Superstore dataset (click [here](https://www.kaggle.com/datasets/gauravtopre/global-superstore-dataset)) which provides more granular Superstore's sales across different country (but the timestamps are different).
 
 There will be one file after downloading the dataset, that is `Sample - Superstore.xls` which contains sheet about the orders (`Orders` sheet name), the regional manager each region (`People` sheet name), and the returned product (`Returns` sheet name).
@@ -67,7 +62,6 @@ Data description for `People`:
 - `Region` &rarr; Region where the Customer belongs.
 
 # Conclusions
-
 Here are some conclusion to sum up what we have been through so far.
 1. The main driver of loss in Superstore is due to high discount given. We clearly see that the more discounts have been offered, the lesser profits have achieved. Products with no discounts show high range of profits but as the discount range increases, we only see more and more loss with hardly any profit. In fact, when the discount given is exceeding 20%, there are no more profits made by Superstore. The most profitable region so far is the Western of United States. 
 2. We have used three machine learning algorithms to perform customer segmentation using LRFM model metrics. The algorithm we will implement is K-Means clustering since it gives us the highest evaluation metric scores (DB index and Silhouette score) compared to the other two algorithms. From K-Means clustering we get 4 segments (793 total customers), i.e.
@@ -83,7 +77,6 @@ Here are some conclusion to sum up what we have been through so far.
    The results of this market basket analysis can be then used for a data-driven marketing strategy and decision making for product recommendation.
 
 # Recommendations
-
 1. Superstore has to review and evaluate the marketing strategy of offering high discount to a product since that will lead to a loss.
 2. "Consumer" customer is the most profitable then followed by "Corporate" customer. The marketing strategy should always focus on retaining this two customers. For "Home Office" customer, these customers might be busy with their work and less likely to spend their time selecting individual products. Hence create a special "Home Office package" with products used for offices for them.
 3. Top 5 most profitable sub-category are "Copiers", "Phones", "Accessories", "Paper", and "Binders". The marketing strategy has to focus on marketing these products, especially for high demand products, "Paper" and "Binders". 
